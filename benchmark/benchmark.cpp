@@ -10,7 +10,6 @@
 #include "cxxopts.hpp"
 #include "utils.hpp"
 
-#include "../competitors/succinct_rmq_wrapper.hpp"
 #include "../competitors/hyperrmq_wrapper.hpp"
 #include "../competitors/crmq_wrapper.hpp"
 

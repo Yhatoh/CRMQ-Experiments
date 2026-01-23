@@ -1,0 +1,6 @@
+[submodule "competitors/cct"]
+	path = competitors/cct
+	url = git@github.com:Yhatoh/cct.git
+[submodule "competitors/hyperrmq"]
+	path = competitors/hyperrmq
+	url = git@github.com:zkou-ut/hyperrmq.git
