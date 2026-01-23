@@ -20,16 +20,15 @@ template<typename K>
 void run_encoding_benchmark(Benchmark<K> &benchmark, const std::string &output_build,
                              const std::string &output_time) {
 
-//    benchmark.template run<HyperRMQWrapper<64>>();
-//    benchmark.template run<HyperRMQWrapper<128>>();
-//    benchmark.template run<HyperRMQWrapper<256>>();
-//    benchmark.template run<HyperRMQWrapper<512>>();
+    benchmark.template run<HyperRMQWrapper<64>>();
+    benchmark.template run<HyperRMQWrapper<128>>();
+    benchmark.template run<HyperRMQWrapper<256>>();
+    benchmark.template run<HyperRMQWrapper<512>>();
 
     benchmark.template run<CRMQWrapper<int64_t, 32>>();
     benchmark.template run<CRMQWrapper<int64_t, 48>>();
     benchmark.template run<CRMQWrapper<int64_t, 64>>();
 
-    //benchmark.template run<CRMQWrapper<int64_t, 16>>();
     std::ofstream c_output(output_build);
     std::ofstream q_output(output_time);
 
