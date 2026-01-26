@@ -90,11 +90,6 @@ private:
             checksum1 ^= rmq.query(query.first, query.second); 
         }
 
-        std::cout << rmq.get_sparse_table() << "," << queries.size() - rmq.get_sparse_table() << "," << rmq.get_recursive_calls() << ","
-                  << (double) rmq.get_sparse_table() / queries.size() << "," << (double) 1 - (double) rmq.get_sparse_table() / queries.size() << "," << (double) rmq.get_recursive_calls() / queries.size() << std::endl;
-        rmq.reset_sparse_table();
-        rmq.reset_recursive_calls();
-
         do_not_optimize(checksum1);
 
         auto start = timer::now();
@@ -104,8 +99,6 @@ private:
         }
 
         do_not_optimize(checksum);
-        rmq.reset_sparse_table();
-        rmq.reset_recursive_calls();
 
         const double time = std::chrono::duration_cast<QueriesTimeFormat>(timer::now() - start).count() / double(queries.size());
 
