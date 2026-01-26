@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
@@ -43,8 +44,6 @@ public:
         auto start = timer::now();
 
         RMQ rmq = RMQ(data);
-        rmq.reset_sparse_table();
-        rmq.reset_recursive_calls();
 
         const double time = std::chrono::duration_cast<BuildTimeFormat>(timer::now() - start).count(); 
 
