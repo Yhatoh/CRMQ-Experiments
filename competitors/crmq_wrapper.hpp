@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 
-#include "cct/include/crmq.hpp"
+#include "CRMQ/include/crmq.hpp"
 
 template<typename T, size_t threshold = 8>
 class CRMQWrapper : public CRMQ<T, threshold> {

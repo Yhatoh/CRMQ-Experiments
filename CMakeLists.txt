@@ -26,22 +26,22 @@ file(GLOB HYPERRMQ_SOURCES ${CMAKE_SOURCE_DIR}/competitors/hyperrmq/src/*.cpp)
 add_library(hyperrmq_lib STATIC ${HYPERRMQ_SOURCES})
 target_include_directories(hyperrmq_lib PUBLIC ${CMAKE_SOURCE_DIR}/competitors/hyperrmq/include)
 
-add_library(cct_lib INTERFACE)
-target_include_directories(cct_lib INTERFACE
-    ${CMAKE_SOURCE_DIR}/competitors/cct/include
-    ${CMAKE_SOURCE_DIR}/competitors/cct/sdsl-lite/include
-    ${CMAKE_SOURCE_DIR}/competitors/cct/bit_vector/include
-    ${CMAKE_SOURCE_DIR}/competitors/cct/bit_vector/_deps/pasta_utils-src/include
-    ${CMAKE_SOURCE_DIR}/competitors/cct/bit_vector/_deps/tlx-src
+add_library(CRMQ_lib INTERFACE)
+target_include_directories(CRMQ_lib INTERFACE
+    ${CMAKE_SOURCE_DIR}/competitors/CRMQ/include
+    ${CMAKE_SOURCE_DIR}/competitors/CRMQ/sdsl-lite/include
+    ${CMAKE_SOURCE_DIR}/competitors/CRMQ/bit_vector/include
+    ${CMAKE_SOURCE_DIR}/competitors/CRMQ/bit_vector/_deps/pasta_utils-src/include
+    ${CMAKE_SOURCE_DIR}/competitors/CRMQ/bit_vector/_deps/tlx-src
 )
 
 add_library(libsais STATIC IMPORTED)
 set_target_properties(libsais PROPERTIES
-    IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/competitors/cct/libsais/libsais.a"
-    INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_SOURCE_DIR}/competitors/cct/libsais/include"
+    IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/competitors/CRMQ/libsais/libsais.a"
+    INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_SOURCE_DIR}/competitors/CRMQ/libsais/include"
 )
 
-target_link_libraries(cct_lib INTERFACE libsais)
+target_link_libraries(CRMQ_lib INTERFACE libsais)
 
 add_library(cxxopts INTERFACE)
 target_include_directories(cxxopts INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/lib/cxxopts/include)

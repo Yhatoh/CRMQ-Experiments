@@ -13,8 +13,8 @@
 #include "../competitors/hyperrmq_wrapper.hpp"
 #include "../competitors/crmq_wrapper.hpp"
 
-#include "../competitors/cct/libsais/include/libsais64.h"
-#include "../competitors/cct/libsais/include/libsais.h"
+#include "../competitors/CRMQ/libsais/include/libsais64.h"
+#include "../competitors/CRMQ/libsais/include/libsais.h"
 
 template<typename K>
 void run_encoding_benchmark(Benchmark<K> &benchmark, const std::string &output_build,

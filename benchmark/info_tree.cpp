@@ -12,8 +12,8 @@
 #include "cxxopts.hpp"
 #include "utils.hpp"
 
-#include "../competitors/cct/libsais/include/libsais64.h"
-#include "../competitors/cct/libsais/include/libsais.h"
+#include "../competitors/CRMQ/libsais/include/libsais64.h"
+#include "../competitors/CRMQ/libsais/include/libsais.h"
 #include "../competitors/crmq_wrapper.hpp"
 
 template< typename T >
