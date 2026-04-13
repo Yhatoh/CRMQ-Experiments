@@ -36,7 +36,7 @@ Arguments:
 
 * `-p`: folder where the query file will be saved
 * `-s`: name of the output file
-* `-n`: maximum index for range query, quieres indices will be in range $[1, n]$
+* `-n`: maximum index for range query, queries indices will be in range $[1, n]$
 * `-q`: number of queries to generate (sizes: 10, 100, 1k, 10k, 100k, 1M, 10M)
 
 ## Run the Benchmark
