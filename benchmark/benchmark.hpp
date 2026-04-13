@@ -54,6 +54,9 @@ public:
         std::cout << "Finished building " << rmq.name() << std::endl;
 
         for(const auto &q : queries) {
+#ifdef INFO
+            rmq.reset_sparse_table();
+#endif
             query_range(rmq, q.first, q.second);
         }
         std::cout << "Finished querying " << rmq.name() << std::endl;
@@ -88,6 +91,13 @@ private:
         for(const auto &query : queries) {
             checksum1 ^= rmq.query(query.first, query.second); 
         }
+#ifdef INFO
+        std::cout << range << "," << rmq.get_sparse_table() << ","
+                  << 100 - rmq.get_sparse_table() << ","
+                  << (double) rmq.get_sparse_table() / queries.size() << ","
+                  << (double) 1 - (double) rmq.get_sparse_table() / queries.size()
+                  << std::endl;
+#endif
 
         do_not_optimize(checksum1);
 

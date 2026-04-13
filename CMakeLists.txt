@@ -15,6 +15,11 @@ if(CMAKE_BUILD_TYPE STREQUAL "Release")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DNDEBUG")
 endif()
 
+
+if(CMAKE_BUILD_TYPE STREQUAL "Information")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DNDEBUG -DINFO")
+endif()
+
 include_directories(competitors)
 
 file(GLOB HYPERRMQ_SOURCES ${CMAKE_SOURCE_DIR}/competitors/hyperrmq/src/*.cpp)

@@ -20,10 +20,12 @@ template<typename K>
 void run_encoding_benchmark(Benchmark<K> &benchmark, const std::string &output_build,
                              const std::string &output_time) {
 
+#ifndef INFO
     benchmark.template run<HyperRMQWrapper<64>>();
     benchmark.template run<HyperRMQWrapper<128>>();
     benchmark.template run<HyperRMQWrapper<256>>();
     benchmark.template run<HyperRMQWrapper<512>>();
+#endif
 
     benchmark.template run<CRMQWrapper<int64_t, 32>>();
     benchmark.template run<CRMQWrapper<int64_t, 48>>();
