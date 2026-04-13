@@ -7,7 +7,7 @@
 ## Build the Project
 
 ```bash
-git clone git@github.com:XXX/CRMQ-Experiments.git
+git clone git@github.com:Yhatoh/CRMQ-Experiments.git
 cd CRMQ-Experiments/
 git submodule update --init --recursive
 
