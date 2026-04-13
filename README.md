@@ -12,7 +12,7 @@ cd CRMQ-Experiments/
 git submodule update --init --recursive
 
 # Build competitors
-cd competitors/cct/libsais/
+cd competitors/CRMQ/libsais/
 cmake . && make -j8
 cd ../bit_vector/
 cmake . && make -j8
