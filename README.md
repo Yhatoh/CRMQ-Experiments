@@ -92,5 +92,16 @@ The output will be shown in this format:
 ```
 r,qst,qbp,%qst,%qbp
 ```
-```
 
+## Credits
+
+If you use this project in a scientific article, please cite the following paper:
+
+```
+@inproceedings{CarmonaL26,
+    author = {Gabriel Carmona and Filippo Lari},
+    title = {Compressing Highly Repetitive Binary Trees with an Application to Range Minimum Queries},
+    booktitle = {Proc. 24th Symposium on Experimental Algorithms},
+    year = {2026},
+}
+```
